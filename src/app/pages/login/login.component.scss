@@ -1,0 +1,30 @@
+.login-container{
+    position: absolute;
+    .card{
+        .card-header{
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            margin-top: -40px;
+            border-radius: 50%;
+            font-size: 36px;
+        }
+    }
+}
+
+.login-container input {
+    height: 36px;
+}
+
+.login-card {
+    border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.captcha-image {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}

@@ -1,0 +1,67 @@
+<div class="d-flex justify-content-center align-items-center w-100 h-100 login-container">
+    <div class="col-xl-4 col-md-6 col-10">
+        <div class="card border-0 box-shadow rounded-0">
+            <div class="card-header d-flex justify-content-center align-items-center border-0 box-shadow">
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+            </div>
+            <div class="card-body text-center pb-1">
+                <h2>SG Login</h2>
+                <a routerLink="/register" class="transition">Don't have an account? Sign up now!</a>
+                <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="text-left mt-4">
+                    <div class="form-group">
+                        <input [formControl]="username" class="form-control validation-field" placeholder="Username" type="text">
+                        <!--<small class="text-danger" *ngIf="form.get('email').touched && form.get('email').hasError('required')">Email is required</small>                              -->
+                        <!--<small class="text-danger" *ngIf="form.get('email').touched && form.get('email').hasError('email')">Invalid email address</small>-->
+                        <small class="text-danger" *ngIf="form.get('email').touched && form.get('email').hasError('required')">请输入账号</small>
+                    </div>
+                    <div class="form-group">
+                        <input [formControl]="password" class="form-control validation-field" placeholder="Password" type="password">
+                        <small class="text-danger" *ngIf="form.get('password').touched && form.get('password').hasError('required')">请输入密码</small>
+                        <small class="text-danger" *ngIf="form.get('password').touched && form.get('password').hasError('minlength')">密码长度至少6位</small>
+                    </div>
+                    <div class="form-group">
+                        <div style="display: flex;justify-content: space-between;">
+                            <input [formControl]="imageCode" class="form-control validation-field"
+                                   style="width: 75%;display: inline-block;" maxlength="5" placeholder="验证码" type="text">
+                            <img class="captcha-image" [hidden]="!imgSrc" [src]="imgSrc" alt="验证码" (click)="syncIdentityCode()"/>
+                        </div>
+                        <small class="text-danger" *ngIf="form.get('imageCode').touched && form.get('imageCode').hasError('required')">请输入验证码</small>
+                    </div>
+                    <div class="form-group d-flex justify-content-between">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="login-checkbox">
+                            <label class="custom-control-label" for="login-checkbox">记住我</label>
+                        </div>
+                        <a class="transition pull-right text-white" href="javascript:void(0);" target="_blank" (click)="forgotPassword()">忘记密码?</a>
+                    </div>
+                    <div class="form-group">
+                        <button [disabled]="!form.valid" class="btn btn-block" type="submit">Sign in</button>
+                    </div>
+                </form>
+            </div>
+            <!--<div class="card-footer text-center bg-transparent">-->
+                <!--<ul class="list-inline mb-0">-->
+                    <!--<li class="list-inline-item">-->
+                        <!--<span class="fa-stack fa-lg">-->
+                            <!--<i class="fa fa-square-o fa-stack-2x"></i>-->
+                            <!--<i class="fa fa-facebook fa-stack-1x"></i>-->
+                        <!--</span>-->
+                    <!--</li>-->
+                    <!--<li class="list-inline-item">-->
+                        <!--<span class="fa-stack fa-lg">-->
+                            <!--<i class="fa fa-square-o fa-stack-2x"></i>-->
+                            <!--<i class="fa fa-twitter fa-stack-1x"></i>-->
+                        <!--</span>-->
+                    <!--</li>-->
+                    <!--<li class="list-inline-item">-->
+                        <!--<span class="fa-stack fa-lg">-->
+                            <!--<i class="fa fa-square-o fa-stack-2x"></i>-->
+                            <!--<i class="fa fa-google fa-stack-1x"></i>-->
+                        <!--</span>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+       
