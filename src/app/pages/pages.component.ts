@@ -17,28 +17,28 @@ export class PagesComponent implements OnInit {
     public menuOption:string;
     public menuTypes = ['default', 'compact', 'mini'];
     public menuTypeOption:string;
-    
+
     public settings: Settings;
-    constructor(public appSettings:AppSettings, public router:Router){        
-        this.settings = this.appSettings.settings; 
-        if(sessionStorage["skin"]) {
-            this.settings.theme.skin = sessionStorage["skin"];
-        }     
+    constructor(public appSettings: AppSettings, public router: Router) {
+        this.settings = this.appSettings.settings;
+        if(sessionStorage['skin']) {
+            this.settings.theme.skin = sessionStorage['skin'];
+        }
     }
 
-    ngOnInit() {        
-        if(window.innerWidth <= 768){
+    ngOnInit() {
+        if (window.innerWidth <= 768){
             this.settings.theme.showMenu = false;
             this.settings.theme.sideChatIsHoverable = false;
         }
         this.showMenu = this.settings.theme.showMenu;
         this.menuOption = this.settings.theme.menu;
-        this.menuTypeOption = this.settings.theme.menuType;           
+        this.menuTypeOption = this.settings.theme.menuType;
     }
 
     public chooseMenu(menu){
-        this.settings.theme.menu = menu; 
-        this.router.navigate(['/']);      
+        this.settings.theme.menu = menu;
+        this.router.navigate(['/']);
     }
 
     public chooseMenuType(menuType){
@@ -49,26 +49,26 @@ export class PagesComponent implements OnInit {
                 return null;
             }
         });
-        if(menuType=='mini'){
+        if(menuType === 'mini'){
             jQuery('.menu-item-link').tooltip('enable');
         }else{
             jQuery('.menu-item-link').tooltip('disable');
         }
     }
 
-    public changeTheme(theme){
+    public changeTheme(theme) {
         this.settings.theme.skin = theme;
-        sessionStorage["skin"] = theme;        
+        sessionStorage['skin'] = theme;
     }
- 
-    ngAfterViewInit(){
+
+    ngAfterViewInit() {
         document.getElementById('preloader').classList.add('hide');
     }
 
 
     @HostListener('window:resize')
-    public onWindowResize():void {
-        let showMenu= !this._showMenu();
+    public onWindowResize(): void {
+        const showMenu = !this._showMenu();
 
         if (this.showMenu !== showMenu) {
             this.showMenuStateChange(showMenu);
@@ -80,7 +80,7 @@ export class PagesComponent implements OnInit {
         this.settings.theme.showMenu = showMenu;
     }
 
-    private _showMenu():boolean {
+    private _showMenu(): boolean {
         return window.innerWidth <= 768;
     }
 

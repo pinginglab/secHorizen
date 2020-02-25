@@ -44,6 +44,7 @@ import {DatePipe, registerLocaleData} from '@angular/common';
 import {BaseInterceptor} from './pages/core/baseInterceptor';
 import {CookieModule} from 'ngx-cookie';
 import zh from '@angular/common/locales/zh';
+import { AttackComponent } from './pages/attack/attack.component';
 
 registerLocaleData(zh);
 
@@ -87,7 +88,8 @@ registerLocaleData(zh);
     FavoritesComponent,
     BlankComponent,
     SearchComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AttackComponent
   ],
   providers: [
       AppSettings,
