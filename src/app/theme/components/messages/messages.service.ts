@@ -91,7 +91,7 @@ export class MessagesService {
         {
             day: '15',
             month: 'May',
-            title: 'Training course',
+            title: 'Training attack',
             text: 'Fusce arcu tortor, tempor aliquam augue vel, consectetur vehicula lectus.',
             color: 'primary'
         },
