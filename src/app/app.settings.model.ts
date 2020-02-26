@@ -1,7 +1,7 @@
 export class Settings {
     constructor(public name: string,
                 public title: string,
-                public theme:{
+                public theme: {
                     menu: string,
                     menuType: string,
                     showMenu: boolean,
@@ -10,6 +10,6 @@ export class Settings {
                     sidebarIsFixed: boolean,
                     showSideChat: boolean,
                     sideChatIsHoverable: boolean,
-                    skin:string
+                    skin: string
                 }) { }
 }

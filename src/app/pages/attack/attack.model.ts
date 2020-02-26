@@ -2,8 +2,9 @@ export class Course {
     id: number;
     name: string;
     author: string;
-    creater: string;
-    picture: string;
+    builder: string;
+    image: string;
     score: string;
-    courseIds: number[];//  =>   for create ngModel multiselect
+    courseIds: number[]; //  =>   for create ngModel multiselect
+    latestDate: Date;
 }

@@ -2,21 +2,27 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
-import {MembershipData} from '../membership/membership.data';
 import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MultiselectDropdownModule} from 'angular-2-dropdown-multiselect';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {PipesModule} from '../../theme/pipes/pipes.module';
-import {routes} from '../membership/membership.module';
+import {AttackComponent} from './attack.component';
+import {AttackData} from './attack.data';
+
+export const routes = [
+    { path: '', component: AttackComponent, pathMatch: 'full' }
+];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+      AttackComponent
+  ],
     imports: [
         CommonModule,
         HttpClientModule,
-        InMemoryWebApiModule.forRoot(MembershipData, { delay: 0 }),
+        InMemoryWebApiModule.forRoot(AttackData, { delay: 0 }),
         RouterModule.forChild(routes),
         FormsModule,
         ReactiveFormsModule,

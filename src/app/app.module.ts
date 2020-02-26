@@ -88,8 +88,7 @@ registerLocaleData(zh);
     FavoritesComponent,
     BlankComponent,
     SearchComponent,
-    NotFoundComponent,
-    AttackComponent
+    NotFoundComponent
   ],
   providers: [
       AppSettings,

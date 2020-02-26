@@ -7,15 +7,15 @@ export class AppSettings {
         'PingSec',
         'Angular Admin Template with Bootstrap 4',
         {
-            menu: 'vertical', //horizontal , vertical
-            menuType: 'default', //default, compact, mini
+            menu: 'vertical', // horizontal , vertical
+            menuType: 'default', // default, compact, mini
             showMenu: true,
             navbarIsFixed: true,
             footerIsFixed: false,
             sidebarIsFixed: true,
             showSideChat: false,
             sideChatIsHoverable: true,
-            skin:'blue'  //light , dark, blue, green, combined, purple, orange, brown, grey, pink
+            skin: 'blue'  // light , dark, blue, green, combined, purple, orange, brown, grey, pink
         }
-    )
+    );
 }

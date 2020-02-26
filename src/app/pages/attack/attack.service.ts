@@ -3,9 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Course} from './attack.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AttackService {
     public url = 'api/courses';
     constructor(public http: HttpClient) { }
@@ -26,6 +24,4 @@ export class AttackService {
     deleteCourse(id: number) {
         return this.http.delete(this.url + '/' + id);
     }
-
-  // constructor() { }
 }

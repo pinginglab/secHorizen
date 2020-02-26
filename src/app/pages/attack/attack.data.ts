@@ -6,19 +6,71 @@ export class AttackData implements InMemoryDbService {
                 id: "1",
                 name: "渗透训练1",
                 author: "yerik",
-                creater: "yerik",
-                picture: "assets/img/profile/ashley.jpg",
+                builder: "yerik",
+                image: "assets/img/profile/ashley.jpg",
                 score: "5星好评",
-                menuIds: []
+                courseIds: [],
+                latestDate: "2020-02-26T16:20:20.511Z"
             },
             {
                 id: "2",
                 name: "渗透训练2",
                 author: "yerik",
-                creater: "yerik",
-                picture: "assets/img/profile/julia.jpg",
+                builder: "yerik",
+                image: "assets/img/profile/julia.jpg",
                 score: "差评",
-                menuIds: []
+                courseIds: [],
+                latestDate: "2020-02-26T16:20:20.511Z"
+            },
+            {
+                id: "3",
+                name: "渗透训练2",
+                author: "yerik",
+                builder: "yerik",
+                image: "assets/img/profile/julia.jpg",
+                score: "差评",
+                courseIds: [],
+                latestDate: "2020-02-26T16:20:20.511Z"
+            },
+            {
+                id: "4",
+                name: "渗透训练2",
+                author: "yerik",
+                builder: "yerik",
+                image: "assets/img/profile/julia.jpg",
+                score: "差评",
+                courseIds: [],
+                latestDate: "2020-02-26T16:20:20.511Z"
+            },
+            {
+                id: "5",
+                name: "渗透训练2",
+                author: "yerik",
+                builder: "yerik",
+                image: "assets/img/profile/julia.jpg",
+                score: "差评",
+                courseIds: [],
+                latestDate: "2020-02-26T16:20:20.511Z"
+            },
+            {
+                id: "6",
+                name: "渗透训练2",
+                author: "yerik",
+                builder: "yerik",
+                image: "assets/img/profile/julia.jpg",
+                score: "差评",
+                courseIds: [],
+                latestDate: "2020-02-26T16:20:20.511Z"
+            },
+            {
+                id: "7",
+                name: "渗透训练2",
+                author: "yerik",
+                builder: "yerik",
+                image: "assets/img/profile/julia.jpg",
+                score: "差评",
+                courseIds: [],
+                latestDate: "2020-02-26T16:20:20.511Z"
             }
         ];
         return courses;
